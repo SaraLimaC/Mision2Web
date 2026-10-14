@@ -1,0 +1,21 @@
+#lista-paises{
+    height: 500px;
+    width: 350px;
+
+    overflow-y: auto;
+
+    border: 1px solid black;
+}
+
+.pais-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px;
+    cursor:pointer;
+}
+
+.pais-item:hover{
+    background-color:#eeeeee;
+}
