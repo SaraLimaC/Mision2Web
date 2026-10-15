@@ -32,9 +32,6 @@ document.addEventListener("click", (e) => {
   }
 });
 
-if (input.value.trim() === "") {
-  cargarPaises();
-}
 
 //Función que escucha si presiono Enter para buscar el país que he escrito
 input.addEventListener("keydown", (event) => {
@@ -96,3 +93,18 @@ async function buscarPais(nombre) {
     console.error(error.message);
   }
 }
+
+input.addEventListener("input", () => {
+  const texto = input.value.toLowerCase();
+
+  if (texto === "") {
+    mostrarLista(todosPaises);
+    return;
+  }
+
+  const filtrados = todosPaises.filter(
+    pais => pais.name.toLowerCase().startsWith(texto)
+  );
+
+  mostrarLista(filtrados);
+});
