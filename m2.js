@@ -1,7 +1,7 @@
 const input = document.querySelector("#pais");
 const boton = document.querySelector("#buscar");
 const resultado = document.querySelector("#resultado");
-
+const listaPaises = document.querySelector("#listaPaises");
 //lista de paises
 async function cargarPaises() {
 
@@ -11,9 +11,7 @@ async function cargarPaises() {
 
   const paises = await response.json();
 
-  const lista = document.querySelector("#lista-paises");
-
-  lista.innerHTML = paises.map(pais => `
+  listaPaises.innerHTML = paises.map(pais => `
     <div class="pais-item"
          onclick="mostrarPais('${pais.name}')">
 
@@ -27,6 +25,8 @@ async function cargarPaises() {
     </div>
   `).join("");
 }
+
+cargarPaises();
 
 //Función que escucha si presiono Enter para buscar el país que he escrito
 input.addEventListener("keydown", (event) => {
