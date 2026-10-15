@@ -184,6 +184,19 @@ button:focus-visible,
     font-weight: bold;
 }
 
+#contenido{
+    width:220px;
+    flex-shrink:0;
+
+    background:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #ccc;
+}
+
 /* predomina el atributo hidden*/
 [hidden] {
     display: none !important;

@@ -182,5 +182,27 @@ function mostrarPais(pais) {
   verPais();
 }
 
+const selectorRegion = document.querySelector("#region");
+
+selectorRegion.addEventListener("change", () => {
+
+    const region = selectorRegion.value;
+
+    console.log(region);
+
+    if (region === "") {
+        mostrarLista(todosPaises);
+        return;
+    }
+
+    const filtrados = todosPaises.filter(
+        pais => pais.region === region
+    );
+
+    console.log(filtrados);
+
+    mostrarLista(filtrados);
+});
+
 // ---------- Inicio ----------
 cargarPaises();
