@@ -18,7 +18,7 @@ async function cargarPaises() {
 function mostrarLista(paises) {
   listaPaises.innerHTML = paises.map(pais => `
     <div class="pais-item" data-nombre="${pais.name}">
-      <img src="${pais.flags.png}" width="40">
+      <img src="${pais.flags.svg}" width="40">
       <span>${pais.name}</span>
     </div>
   `).join("");
@@ -31,8 +31,7 @@ document.addEventListener("click", (e) => {
     buscarPais(item.dataset.nombre);
   }
 });
-
-
+cargarPaises()
 //Función que escucha si presiono Enter para buscar el país que he escrito
 input.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
@@ -60,7 +59,9 @@ async function buscarPais(nombre) {
 
     const data = await response.json();
     console.log(data);
-   const pais = data[0];
+    const pais = data.find(
+      p => p.name.toLowerCase() === nombre.toLowerCase()
+    );
 
     resultado.innerHTML = `
       <h2>${pais.name}</h2>
