@@ -9,13 +9,50 @@
     
 </head>
 <body>
-    <header>Busca un país</header>
-    <input type="text" id="pais" placeholder="Buscar país">
-    <button id="buscar">Buscar</button>
 
-    <div id="listaPaises"></div>
-    <div id="resultado"></div>
-    
+    <header>
+        <h1>🌍 Wikicountry </h1>
+        <p>Busca países o selecciónalos de la lista</p>
+    </header>
+
+    <main>
+
+        <section id="busqueda">
+
+            <div class="buscador">
+                <input
+                    type="text"
+                    id="pais"
+                    placeholder="Buscar país..."
+                >
+
+                <button id="buscar">
+                    Buscar
+                </button>
+            </div>
+
+            <p id="mensaje"></p>
+
+            <div id="listaPaises"></div>
+
+        </section>
+
+        <section id="detalle" hidden>
+
+            <button id="volver">
+                ← Volver
+            </button>
+
+            <div id="resultado"></div>
+
+        </section>
+
+        <section>
+            <div id="mapa"></div>
+        </section>
+
+    </main>
+
 </body>
 
 </html>

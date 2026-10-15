@@ -1,4 +1,4 @@
-/* ---------- Variables de diseño ---------- */
+/* colores y bordes */
 :root {
     --fondo: #eef3f1;
     --papel: #ffffff;
@@ -22,7 +22,7 @@ body {
     line-height: 1.5;
 }
 
-/* ---------- Cabecera ---------- */
+/* espacio de la cabecera*/
 header {
     padding: 40px 20px 24px;
     text-align: center;
@@ -45,7 +45,7 @@ main {
     padding: 0 16px 48px;
 }
 
-/* ---------- Buscador ---------- */
+/* espacio del buscador */
 .buscador {
     display: flex;
     gap: 8px;
@@ -87,7 +87,7 @@ button:focus-visible,
     outline-offset: 2px;
 }
 
-/* ---------- Mensajes ---------- */
+/* mensajes de error */
 #mensaje {
     min-height: 1.5em;
     margin: 12px 4px;
@@ -100,7 +100,6 @@ button:focus-visible,
     text-align: center;
 }
 
-/* ---------- Lista de países ---------- */
 #listaPaises {
     max-height: 500px;
     overflow-y: auto;
@@ -134,7 +133,7 @@ button:focus-visible,
     border: 1px solid var(--linea);
 }
 
-/* ---------- Detalle del país ---------- */
+/* detalles de los botones de volver */
 #volver {
     margin-bottom: 16px;
     background: transparent;
@@ -185,12 +184,12 @@ button:focus-visible,
     font-weight: bold;
 }
 
-/* ---------- Atributo hidden: que siempre gane ---------- */
+/* predomina el atributo hidden*/
 [hidden] {
     display: none !important;
 }
 
-/* ---------- Móvil ---------- */
+/* para formato móvil*/
 @media (max-width: 480px) {
     header h1 {
         font-size: 1.8rem;
@@ -199,4 +198,8 @@ button:focus-visible,
     .ficha {
         padding: 20px;
     }
+}
+
+#mapa{
+    height:400px;
 }
